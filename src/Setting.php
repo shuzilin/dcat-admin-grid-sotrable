@@ -17,8 +17,8 @@ class Setting extends Form
     public function form()
     {
         $this->radio('sortalbe_type', $this->trans('setting.sortalbe_type'))
-            ->options([$this->trans('setting.row_button_style'), $this->trans('setting.row_style')])
-            ->default(0);
+            ->options([$this->trans('setting.row_style'), $this->trans('setting.row_button_style')])
+            ->default(1);
         $this->radio('sortalbe_cancel', $this->trans('setting.sortalbe_cancel'))
             ->options([$this->trans('setting.do_not_show'), $this->trans('setting.show')])
             ->default(0);
