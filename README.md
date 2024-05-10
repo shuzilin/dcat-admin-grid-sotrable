@@ -5,22 +5,22 @@
 
 </div>
 
-这个插件可以帮助你通过拖动数据列表的行来进行排序，前端基于[SortableJS](https://github.com/SortableJS/Sortable), 后端基于[eloquent-sortable](https://github.com/spatie/eloquent-sortable)。
+這個擴充程式可以幫助您透過拖曳資料列表的列來進行排序，前端基於[SortableJS](https://github.com/SortableJS/Sortable), 後端基於[eloquent-sortable](https://github.com/spatie/eloquent-sortable)。
 
-[Dcat-admin](https://github.com/jqhph/dcat-admin) 官方的插件[DCAT-ADMIN GRID-SORTABLE](https://github.com/dcat-admin/grid-sortable) 只支持 1.* 的版本
-，在此基础上制作了这个仅2.* 可用的版本。
+[Dcat-admin](https://github.com/jqhph/dcat-admin) 官方的擴充程式[DCAT-ADMIN GRID-SORTABLE](https://github.com/dcat-admin/grid-sortable) 只支持 1.* 的版本
+，在此基礎上製作了這個僅 2.* 可用的版本。
 
-添加了不同的拖动方式，可以在设置中选择。
+新增了不同的拖曳方式，可以在設定中選擇。
 
-添加了取消的按钮，可以在设置中选择显示与否。
+新增了取消的按鈕，可以在設定中選擇顯示與否。
 
 ## 安装
 
 ```shell
-composer require pstldz/dcat-admin-grid-sotrable
+composer require shuzilin/dcat-admin-grid-sotrable
 ```
 
-然后打开`http://yourhost/admin/auth/extensions` ，依次点击 `更新` 和 `启用` 。
+然後開啟網頁`http://yourhost/admin/auth/extensions` ，依序點擊 `更新` 和 `啟用` 。
 
 
 ## 使用
@@ -45,16 +45,23 @@ class MyModel extends Model implements Sortable
 }
 ```
 
-在表格中使用对应的排序字段
+在表格中使用對應的排序字段
 
 ```php
+
 $grid = new Grid(new MyModel());
 
+
+遞增排序
 $grid->sortable('order_column');
+
+遞減排序
+$grid->sortable('order_column', false);
+
 ```
 
-## 翻译
-对应语言目录下新建`sortable.php` ,或者直接在 `global.php` 添加以下内容
+## 多語翻譯
+對應語言目錄下新建`sortable.php` ,或直接在 `global.php` 新增以下內容
 ```php
 return [
     'save_order' => 'Save order',

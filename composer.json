@@ -1,32 +1,31 @@
 {
-    "name": "pstldz/dcat-admin-grid-sotrable",
+    "name": "shuzilin/dcat-admin-grid-sotrable",
     "alias": "",
-    "description": "拖动排序",
+    "description": "拖曳排序",
     "type": "library",
-    "keywords": ["dcat-admin", "extension", "grid-sortable"],
-    "homepage": "https://github.com/pstldz/dcat-admin-grid-sotrable",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/shuzilin/dcat-admin-grid-sotrable",
     "license": "MIT",
     "authors": [
         {
-            "name": "pstldz",
-            "email": "1170525100@qq.com"
+            "name": "shuzilin",
+            "email": "shuzilin@gmail.com"
         }
     ],
     "require": {
         "php": ">=7.1.0",
-        "dcat/laravel-admin": "~2.0",
-        "spatie/eloquent-sortable": "*"
+        "dcat/laravel-admin": "~2.0"
     },
     "autoload": {
         "psr-4": {
-            "Pstldz\\DcatAdminGridSotrable\\": "src/"
+            "Shuzilin\\DcatAdminGridSotrable\\": "src/"
         }
     },
     "extra": {
-        "dcat-admin": "Pstldz\\DcatAdminGridSotrable\\DcatAdminGridSotrableServiceProvider",
+        "dcat-admin": "Shuzilin\\DcatAdminGridSotrable\\DcatAdminGridSotrableServiceProvider",
         "laravel": {
             "providers": [
-                "Pstldz\\DcatAdminGridSotrable\\DcatAdminGridSotrableServiceProvider"
+                "Shuzilin\\DcatAdminGridSotrable\\DcatAdminGridSotrableServiceProvider"
             ]
         }
     }

@@ -1,7 +1,5 @@
 <?php
-
-
-namespace Pstldz\DcatAdminGridSotrable;
+namespace Shuzilin\DcatAdminGridSotrable;
 
 use Dcat\Admin\Grid\Tools\AbstractTool;
 use Illuminate\Http\Request;

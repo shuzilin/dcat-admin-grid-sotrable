@@ -1,6 +1,6 @@
 <?php
 
-namespace Pstldz\DcatAdminGridSotrable;
+namespace Shuzilin\DcatAdminGridSotrable;
 
 use Dcat\Admin\Admin;
 use Dcat\Admin\Form;
@@ -72,7 +72,7 @@ HTML;
 
     public function parameters()
     {
-        $repository = $this->parent->model()->repository();
+        $repository = $this->parent->model()->repository()->model();
         if (method_exists($repository, 'getOriginalClassName')) {
             $class = $repository->getOriginalClassName();
         } else {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pstldz\DcatAdminGridSotrable;
+namespace Shuzilin\DcatAdminGridSotrable;
 
 use Dcat\Admin\Admin;
 use Dcat\Admin\Grid\Displayers\AbstractDisplayer;
