@@ -28,7 +28,7 @@ class DcatAdminGridSotrableServiceProvider extends ServiceProvider
         $sortType=self::setting('sortalbe_type')?self::setting('sortalbe_type'):0;
         $cancelBtn=self::setting('sortalbe_cancel')?self::setting('sortalbe_cancel'):0;
         Admin::requireAssets('@shuzilin.dcat-admin-grid-sotrable');
-        Grid::macro('sortable', function ($sortName = 'order', $sortAsc = true) use($sortType,$cancelBtn){
+        Grid::macro('sortable', function ($sortName = 'order') use($sortType,$cancelBtn){
             /* @var $this Grid */
 
             $this->tools(new SaveOrderButton($sortName));
@@ -38,8 +38,7 @@ class DcatAdminGridSotrableServiceProvider extends ServiceProvider
             }
 
             if (!request()->has($this->model()->getSortName())) {
-                $direction = $sortAsc ? 'asc' : 'desc';
-                $this->model()->ordered($direction);
+                $this->model()->ordered();
             }
             if($sortType){
                 $this->column($sortName)

@@ -51,12 +51,8 @@ class MyModel extends Model implements Sortable
 
 $grid = new Grid(new MyModel());
 
-
-遞增排序
 $grid->sortable('order_column');
 
-遞減排序
-$grid->sortable('order_column', false);
 
 ```
 
