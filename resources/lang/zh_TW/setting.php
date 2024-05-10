@@ -6,5 +6,5 @@ return [
     'row_style' => '整列拖曳',
     'row_button_style' => '列內按鈕拖曳',
     'do_not_show' => '不顯示',
-    'show' => '不顯示'
+    'show' => '顯示'
 ];
